@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+* {
+	background: #141414;
+	color: #ffffff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .movie-app > .row {
+	overflow-x: auto;
+	flex-wrap: nowrap;
+} */
+
+.image-container {
+	position: relative;
+	transition: transform 0.2s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.image-container:hover {
+	cursor: pointer;
+	transform: scale(1.05);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.image-container:hover .overlay {
+	opacity: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
 }
+.search{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.mov{
+	margin-left: 2%;
+	margin-top: 1.5%;
+}
+.mov>h2{
+	font-weight: 700;
+	font-size: 2rem;
+}
+.inp{
+	margin-left: 2%;
+	margin-top: 1.5%;
+	display: flex;
+	margin-right: 3%;
+}
+.inp>input{
+	width: 210%;
+}
+.inp> button{
+	width:70%;
+	padding: 0.5rem;
+	border-radius: 5px;
+	border: #141414;
+	background-color: #797575;
+	margin-left: 2%;
+	font-weight: 700;
+}
+.lol{
+	
+	border: 1px solid white;
+	margin-top: 2%;
+	display: flex;
+	
+	overflow-x: auto;
+	flex-wrap: nowrap;
+	padding: 30px;
+	border-radius: 10px;
+}
+.solo{
+	/* border: 1px solid white; */
+	text-align: center;
+	padding-left: 1%;
+	padding-right: 1%;
+	width: 20%;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.title{
+	/* border: 1px solid white; */
+	/* padding: 1%; */
+	margin-top: 5%;
+	height: 10vh;
+	padding-top: 2%;
+	background-color: rgb(49, 48, 48);
+	border-radius: 20px;
+	font-weight: 600;
+	font-size: 1.5rem;
+	overflow-wrap: normal;
+	text-align: center;
+	
+}
+.solo>img{
+	height: 50vh;
+	margin-top: 10%;
+}
+.title>h2{
+	background: rgb(49, 48, 48);
 }
